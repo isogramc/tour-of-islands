@@ -1,17 +1,22 @@
-<div *ngIf="selectedIsland">
-  <h2>{{selectedIsland.name | uppercase}} Details</h2>
-<div><span>id: </span>{{selectedIsland.id}}</div>
-<div>
-  <label>name:
-    <input [(ngModel)]="selectedIsland.name" placeholder="name"/>
-  </label>
-</div>
-</div>
 <h2>Islands</h2>
 <ul class="islands">
   <li *ngFor="let island of islands"
       [class.selected]="island === selectedIsland"
       (click)="onSelect(island)">
-    <span class="badge">{{island.id}}</span> {{island.name}}
+    <ons-button (click)="modal.show()" class="badge">{{island.id}}</ons-button> {{island.name}}
   </li>
 </ul>
+
+<ons-modal #modal>
+  <div *ngIf="selectedIsland">
+    <h2>{{selectedIsland.name | uppercase}} Details</h2>
+    <div><span>id: </span>{{selectedIsland.id}}</div>
+    <div>
+      <label>name:
+        <input [(ngModel)]="selectedIsland.name" placeholder="name"/>
+      </label>
+    </div>
+  </div>
+  <p>This is just an example.</p>
+  <p><span (click)="modal.hide()" style="text-decoration: underline; cursor: pointer;">Click</span> to hide this modal.</p>
+</ons-modal>
