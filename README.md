@@ -32,4 +32,6 @@ You used *ngFor to display a list.
 You used *ngIf to conditionally include or exclude a block of HTML.
 You can toggle a CSS style class with a class binding.
 
-# testing mobile components for possible use in other projects
+## ONSEN 
+mobile component implementation for possible use via [ANGULAR WEB](https://angular.io/resources)
+
