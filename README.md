@@ -31,3 +31,5 @@ The user can select an island and see that island's details.
 You used *ngFor to display a list.
 You used *ngIf to conditionally include or exclude a block of HTML.
 You can toggle a CSS style class with a class binding.
+
+# testing mobile components for possible use in other projects
